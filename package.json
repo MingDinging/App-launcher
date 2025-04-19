@@ -2,10 +2,17 @@
   "name": "app-launcher",
   "version": "1.0.0",
   "description": "This is a program that can be customized and the application group can be launched with one click",
-  "main": "index.js",
+  "main": "src/main/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "app-launcher",
+    "productName": "app-launcher",
+    "files": ["src/**/*"]
   },
   "repository": {
     "type": "git",
@@ -21,6 +28,7 @@
   },
   "homepage": "https://github.com/MingDinging/App-launcher#readme",
   "devDependencies": {
-    "electron": "^35.2.0"
+    "electron": "^35.2.0",
+    "electron-builder": "^26.0.12"
   }
 }

@@ -1,0 +1,46 @@
+/* 窗口控制容器 */
+.window-controls {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 9999;
+    -webkit-app-region: no-drag; /* 禁止拖动区域 */
+  }
+  
+  /* 控制按钮通用样式 */
+  .control-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* 图片占位样式（替换图片时删除background-color） */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* 实际使用时应替换为：
+    background-image: url('图片路径');
+    background-size: cover; */
+  }
+  
+  /* 按钮悬停效果 */
+  .control-btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 关闭按钮特殊样式 */
+  #close-btn:hover {
+    background-color: #ff5f57;
+  }
+  
+  /* 拖动区域（覆盖窗口四边） */
+  .drag-region {
+    position: fixed;
+    z-index: 9998;
+    -webkit-app-region: drag;
+  }
+  #top-drag    { top: 0;    left: 0; right: 0; height: 32px; }
+  #left-drag   { top: 32px; left: 0; width: 4px; bottom: 4px; }
+  #right-drag  { top: 32px; right: 0; width: 4px; bottom: 4px; }
+  #bottom-drag { bottom: 0; left: 0; right: 0; height: 4px; }
