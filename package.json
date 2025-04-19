@@ -4,7 +4,8 @@
   "description": "This is a program that can be customized and the application group can be launched with one click",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MingDinging/App-launcher/issues"
   },
-  "homepage": "https://github.com/MingDinging/App-launcher#readme"
+  "homepage": "https://github.com/MingDinging/App-launcher#readme",
+  "devDependencies": {
+    "electron": "^35.2.0"
+  }
 }
